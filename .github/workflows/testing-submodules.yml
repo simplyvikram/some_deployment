@@ -34,7 +34,8 @@ jobs:
         run: |
           echo "Testing submodules"
           git submodule add --force https://github.com/simplyvikram/eai_environment_submodule.git environment
-          echo "-----contents of ./git/config ------ start"
-          cat ./git/config
-          echo "-----contents of ./git/config ------ end"
+          echo "\n"; ls ; echo "\n\n"
+          echo "-----contents of .git/config ------ start"
+          cat ./.git/config
+          echo "-----contents of .git/config ------ end"
           cd 
