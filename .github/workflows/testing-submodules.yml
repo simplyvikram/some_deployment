@@ -33,13 +33,17 @@ jobs:
       - name: testing importing submodules
         run: |
           echo "Testing submodules"
-          echo "-------ls before adding gitsubmodule----"; ls ; printf "\n"
+          echo "-------tree before adding gitsubmodule----"; tree -a; printf "\n"
           git submodule add --force https://github.com/simplyvikram/eai_environment_submodule.git environment
-          echo "-------ls after adding gitsubmodule----"; ls ; printf "\n"
+          echo "-------tree after adding gitsubmodule----"; tree -a; printf "\n"
           echo "-----contents of .git/config ------ start"
           cat ./.git/config
           echo "-----contents of .git/config ------ end"
+          echo "-----contents of .gitmodules ------ start"
+          cat .gitmodules
+          echo "-----contents of .gitmodules ------ end"
           cd environment
+          echo "----Inside environment folder"
           pwd
           git remote -v
           git checkout main
