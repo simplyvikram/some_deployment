@@ -41,7 +41,10 @@ jobs:
           echo "-----contents of .git/config ------ end"
           cd environment
           pwd
+          git remote -v
           git checkout main
           git pull
           echo "------Checking git status"
-          echo "git log -2"
+          echo "git log -5"
+
+
