@@ -45,6 +45,6 @@ jobs:
           git checkout main
           git pull
           echo "------Checking git status"
-          echo "git log -5"
+          git log -n 5
 
 
